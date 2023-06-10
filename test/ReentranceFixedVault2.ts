@@ -4,7 +4,7 @@ import {
 import { expect } from "chai";
 import { ethers } from "hardhat";
 
-const CONTRACT_NAME="ReentranceVulnerableVault2";
+const CONTRACT_NAME="ReentranceFixedVault2";
 let description=CONTRACT_NAME;
 describe(description, function () {
   // We define a fixture to reuse the same setup in every test.

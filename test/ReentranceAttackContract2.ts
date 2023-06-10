@@ -13,7 +13,7 @@ describe(CONTRACT_NAME, function () {
     // Contracts are deployed using the first signer/account by default
     const [vaultOwner, trustedUser, thief] = await ethers.getSigners();
 
-  const ReentranceVulnerableVault = await ethers.getContractFactory("ReentranceVulnerableVault2");
+  const ReentranceVulnerableVault = await ethers.getContractFactory("ReentranceFixedVault2");
     const vulnerableVaultInstance = await ReentranceVulnerableVault.deploy();
   const ReentranceAttackContract = await ethers.getContractFactory(CONTRACT_NAME);
     const attacker= await ReentranceAttackContract.connect(thief).deploy(vulnerableVaultInstance);
